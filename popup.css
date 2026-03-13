@@ -1,0 +1,131 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+  color: #0f172a;
+  background: #fff;
+}
+
+.popup {
+  width: 296px;
+  padding: 16px;
+}
+
+/* ── brand ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+.logo {
+  font-size: 18px;
+  color: #6366f1;
+  line-height: 1;
+}
+.brand-name {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #0f172a;
+}
+
+/* ── capture grid ── */
+.capture-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.capture-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+  text-align: left;
+}
+
+.capture-btn:hover {
+  border-color: #6366f1;
+  background: #f0f0ff;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.08);
+}
+
+.capture-btn .icon {
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.capture-btn .label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.capture-btn .hint {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* ── divider ── */
+.divider {
+  height: 1px;
+  background: #f1f5f9;
+  margin: 12px 0;
+}
+
+/* ── nav row ── */
+.nav-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 7px 4px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: 12px;
+  color: #475569;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.nav-btn:hover {
+  background: #eef2ff;
+  color: #4338ca;
+  border-color: #c7d2fe;
+}
+
+/* ── shortcut badge ── */
+.shortcut {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 10px;
+  color: #94a3b8;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Mono", "Monaco", monospace;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* ── error msg ── */
+.msg {
+  margin-top: 10px;
+  min-height: 16px;
+  font-size: 11px;
+  color: #ef4444;
+  line-height: 1.4;
+}

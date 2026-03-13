@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnapLite 历史</title>
+    <link rel="stylesheet" href="./history.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <div class="head">
+        <h1>截图历史</h1>
+        <div class="actions">
+          <select id="siteFilter"></select>
+          <button id="selectAllBtn">全选当前</button>
+          <button id="deleteSelectedBtn" class="danger">删除选中</button>
+          <button id="refreshBtn">刷新</button>
+          <button id="clearBtn" class="danger">清空历史</button>
+        </div>
+      </div>
+      <div id="list" class="list"></div>
+      <p id="empty" class="empty">暂无历史截图</p>
+    </main>
+    <div id="toast" class="toast"></div>
+    <script src="./history.js"></script>
+  </body>
+  </html>

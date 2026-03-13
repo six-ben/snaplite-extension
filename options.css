@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+  background: #f8fafc;
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 24px auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 20px;
+}
+
+section {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+label {
+  font-size: 14px;
+  color: #374151;
+}
+
+input,
+select {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  padding: 9px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.ghost {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* ── shortcuts section ── */
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 20px 0 10px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.shortcut-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shortcut-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.shortcut-name {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.shortcut-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shortcut-key kbd {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  color: #1e293b;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  line-height: 1.4;
+}
+
+.shortcut-key .plus {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.shortcut-unset {
+  font-size: 12px;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.shortcut-loading {
+  font-size: 13px;
+  color: #94a3b8;
+  padding: 12px 0;
+}
+
+.shortcut-tip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.shortcut-tip-text {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+#msg {
+  min-height: 20px;
+  margin-top: 10px;
+  color: #059669;
+  font-size: 13px;
+}

@@ -1,0 +1,207 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+  color: #0f172a;
+  background: #f1f5f9;
+  min-height: 100vh;
+}
+
+/* ── toolbar ── */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 16px;
+  height: 52px;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 18px;
+  color: #6366f1;
+  margin-right: 4px;
+}
+
+/* ── tool group ── */
+.tool-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.sep {
+  width: 1px;
+  height: 24px;
+  background: #e2e8f0;
+  margin: 0 4px;
+}
+
+/* ── tool buttons ── */
+.tool-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.tool-btn:hover {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.tool-btn.active {
+  background: #6366f1;
+  color: #fff;
+}
+
+/* ── style group ── */
+.style-group {
+  gap: 6px;
+}
+
+input[type="color"] {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+}
+
+select {
+  height: 28px;
+  padding: 0 6px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  color: #475569;
+  cursor: pointer;
+  outline: none;
+}
+
+/* ── ctrl buttons ── */
+.ctrl-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 9px;
+  height: 30px;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  color: #64748b;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.ctrl-btn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* ── action buttons ── */
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.12s, box-shadow 0.12s;
+}
+
+.action-btn.secondary {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  color: #475569;
+}
+
+.action-btn.secondary:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.action-btn.primary {
+  background: #6366f1;
+  color: #fff;
+}
+
+.action-btn.primary:hover {
+  opacity: 0.88;
+  box-shadow: 0 4px 12px rgba(99,102,241,0.3);
+}
+
+/* ── msg bar ── */
+.msg-bar {
+  min-height: 28px;
+  padding: 4px 16px;
+  font-size: 12px;
+  color: #059669;
+  background: #f0fdf4;
+  border-bottom: 1px solid #bbf7d0;
+  display: none;
+}
+
+.msg-bar.visible {
+  display: block;
+}
+
+.msg-bar.error {
+  color: #dc2626;
+  background: #fef2f2;
+  border-bottom-color: #fecaca;
+}
+
+/* ── stage ── */
+.stage-wrap {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 52px);
+}
+
+#stage {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.07), 0 20px 40px rgba(0,0,0,.10);
+  max-width: 100%;
+  cursor: crosshair;
+  display: block;
+}

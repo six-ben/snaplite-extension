@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnapLite 设置</title>
+    <link rel="stylesheet" href="./options.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>SnapLite 设置</h1>
+      <section>
+        <label>默认截图模式</label>
+        <select id="defaultMode">
+          <option value="area">区域截图</option>
+          <option value="visible">可视区域</option>
+          <option value="full">整页截图</option>
+        </select>
+      </section>
+
+      <section>
+        <label>下载格式</label>
+        <select id="format">
+          <option value="png">PNG（推荐）</option>
+          <option value="jpg">JPG</option>
+        </select>
+      </section>
+
+      <section>
+        <label>
+          <input type="checkbox" id="keepHistory" />
+          保留截图历史
+        </label>
+      </section>
+
+      <section>
+        <label>历史数量上限</label>
+        <input type="number" id="historyLimit" min="1" max="100" />
+      </section>
+
+      <section>
+        <label>
+          <input type="checkbox" id="hideFixedStickyInFullCapture" />
+          整页截图时隐藏 fixed/sticky 元素（减少重复，建议开启）
+        </label>
+      </section>
+
+      <section>
+        <label>
+          <input type="checkbox" id="uploadEnabled" />
+          开启上传（可选）
+        </label>
+      </section>
+
+      <section>
+        <label>上传地址</label>
+        <input id="uploadEndpoint" placeholder="https://example.com/upload" />
+      </section>
+
+      <section>
+        <label>上传 Token</label>
+        <input id="uploadToken" placeholder="Bearer xxx" />
+      </section>
+
+      <h2 class="section-title">快捷键设置</h2>
+      <div class="shortcut-list" id="shortcutList">
+        <div class="shortcut-loading">加载中…</div>
+      </div>
+      <div class="shortcut-tip">
+        <button id="openShortcutPage" class="ghost" type="button">前往 Chrome 修改快捷键</button>
+        <span class="shortcut-tip-text">快捷键由浏览器统一管理，点击左侧按钮可跳转到设置页</span>
+      </div>
+
+      <div class="actions">
+        <button id="saveBtn">保存设置</button>
+        <button id="resetBtn" class="ghost">恢复默认</button>
+      </div>
+      <p id="msg"></p>
+    </main>
+    <script src="./options.js"></script>
+  </body>
+  </html>

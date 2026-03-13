@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnapLite 编辑</title>
+    <link rel="stylesheet" href="./editor.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <div class="toolbar-left">
+        <span class="logo">✦</span>
+        <div class="tool-group" id="tools">
+          <button class="tool-btn active" data-tool="rect" title="矩形">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="1.5" y="1.5" width="12" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <button class="tool-btn" data-tool="circle" title="圆形">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="7.5" r="6" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <button class="tool-btn" data-tool="arrow" title="箭头">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 13L13 2M13 2H8M13 2V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="tool-btn" data-tool="pen" title="画笔">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M11 2L13 4L5 12H3V10L11 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="tool-btn" data-tool="text" title="文字">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 3H12M7.5 3V12M5.5 12H9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <button class="tool-btn" data-tool="mosaic" title="马赛克">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="1" y="1" width="5" height="5" rx="0.5" fill="currentColor" opacity="0.5"/><rect x="9" y="1" width="5" height="5" rx="0.5" fill="currentColor"/><rect x="1" y="9" width="5" height="5" rx="0.5" fill="currentColor"/><rect x="9" y="9" width="5" height="5" rx="0.5" fill="currentColor" opacity="0.5"/></svg>
+          </button>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="tool-group style-group">
+          <input type="color" id="color" value="#ef4444" title="颜色" />
+          <select id="size" title="粗细">
+            <option value="2">细</option>
+            <option value="4" selected>中</option>
+            <option value="6">粗</option>
+            <option value="10">特粗</option>
+          </select>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="tool-group">
+          <button class="ctrl-btn" id="undoBtn" title="撤销 (⌘Z)">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5H8.5C10.433 5 12 6.567 12 8.5C12 10.433 10.433 12 8.5 12H5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M4.5 2.5L2 5L4.5 7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            撤销
+          </button>
+          <button class="ctrl-btn" id="redoBtn" title="重做 (⌘⇧Z)">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 5H5.5C3.567 5 2 6.567 2 8.5C2 10.433 3.567 12 5.5 12H9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M9.5 2.5L12 5L9.5 7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            重做
+          </button>
+          <button class="ctrl-btn" id="clearBtn" title="清空标注">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3L11 11M11 3L3 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            清空
+          </button>
+        </div>
+      </div>
+
+      <div class="toolbar-right">
+        <button id="copyBtn" class="action-btn secondary" title="复制到剪贴板">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="5" y="5" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.4"/><path d="M9 5V3C9 2.448 8.552 2 8 2H3C2.448 2 2 2.448 2 3V8C2 8.552 2.448 9 3 9H5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          复制
+        </button>
+        <button id="downloadBtn" class="action-btn primary" title="下载图片">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2V9M7 9L4.5 6.5M7 9L9.5 6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 11H12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          下载
+        </button>
+      </div>
+    </header>
+
+    <div id="msgBar" class="msg-bar"></div>
+
+    <main class="stage-wrap">
+      <canvas id="stage"></canvas>
+    </main>
+
+    <script src="./editor.js"></script>
+  </body>
+</html>
